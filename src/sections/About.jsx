@@ -44,12 +44,11 @@ export default function About() {
         scrollTrigger: {
           trigger: "#about-section",
           start: "top bottom",
-          end: "bottom top",
+          end: "center bottom",
           scrub: true,
         },
       })
 
-      // Animación de entrada (0% - 50% del scroll)
       tlMobile
         .from("#about-part-1-text", {
           y: 300,
@@ -78,11 +77,11 @@ export default function About() {
   return (
     <section id="about-section" className="relative h-300px md:h-dvh flex flex-col gap-8 md:gap-0 md:flex-row mt-10 sm:my-2 lg:px-14 overflow-hidden select-none">
       <div className="flex-1 px-4 lg:px-8">
-        <div id="about-part-1" className="relative h-full flex flex-col justify-center md:justify-start">
-          <div id="about-part-1-text" className="p-0 md:p-3 text-center md:text-balance">
-            <p className="font-family-lato mt-2">We are a studio passionate about creating exceptional web experiences. Our approach centers on urban minimalism, where every element serves a purpose and functionality meets aesthetics.</p>
+        <div id="about-part-1" className="h-full flex flex-col justify-center md:justify-start">
+          <div id="about-part-1-text" className="p-0 md:p-3 text-center md:text-balance flex-none h-auto md:h-37 flex justify-center items-center">
+            <p className="font-family-lato mt-2 text-sm md:text-base">We are a studio passionate about creating exceptional web experiences. Our approach centers on urban minimalism, where every element serves a purpose and functionality meets aesthetics.</p>
           </div>
-          <div className="hidden md:block w-full h-full contrast-150">
+          <div className="hidden md:block w-full shrink contrast-150">
             <img src="../../images/part-1-about.jpg" className="object-cover w-full h-full grayscale" />
           </div>
         </div>
@@ -99,10 +98,10 @@ export default function About() {
       </div>
       <div className="flex-1 px-4 lg:px-8">
         <div id="about-part-3" className="relative h-full flex flex-col justify-center md:justify-start">
-          <div id="about-part-3-text" className="p-0 md:p-3 text-center md:text-balance">
-            <p className="font-family-lato mt-2">At Tween Protocol, we believe that empty spaces aren't limitations, but opportunities. Every project is an opportunity to fill those spaces with innovation, creativity, and digital solutions that transcend the ordinary.</p>
+          <div id="about-part-3-text" className="p-0 md:p-3 text-center md:text-balance flex-none h-auto md:h-37 flex justify-center items-center">
+            <p className="font-family-lato mt-2 text-sm md:text-base">At Tween Protocol, we believe that empty spaces aren't limitations, but opportunities. Every project is an opportunity to fill those spaces with innovation, creativity, and digital solutions that transcend the ordinary.</p>
           </div>
-          <div className="hidden md:block w-full h-full contrast-150 -z-10">
+          <div className="hidden md:block w-full shrink contrast-150 -z-10">
             <img src="../../images/part-3-about.jpg" className="object-cover w-full h-full grayscale" />
           </div>
         </div>

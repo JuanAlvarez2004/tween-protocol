@@ -52,11 +52,11 @@ export default function Services() {
   }, [])
 
   return (
-    <section id="services-section" className="min-h-96 md:pl-5 overflow-hidden mb-0 mt-10 flex flex-col">
+    <section id="services-section" className="min-h-96 md:pl-5 px-6 overflow-hidden mb-0 mt-10 flex flex-col">
       <div className="relative flex-2 flex flex-col lg:flex-row gap-4">
         <div className="md:ml-10 flex-1 font-family-lato flex justify-center flex-col">
-          <h2 className="text-8xl md:text-9xl font-family-oswald line-through">Services</h2>
-          <p className="text-sm mt-3">
+          <h2 className="text-8xl md:text-9xl font-family-oswald line-through text-center md:text-left">Services</h2>
+          <p className="text-sm md:text-base mt-3 text-center md:text-start">
             We offer comprehensive digital solutions that transform ideas into exceptional web experiences. Our specialized approach includes front-end web development using modern technologies, user-centered UX/UI design, interactive web animations with GSAP, consistent digital branding, web performance optimization, and digital experience consulting to maximize the impact of your online presence.
           </p>
         </div>

@@ -65,7 +65,7 @@ export default function Home() {
         </div>
         <div className="font-family-lato lg:col-start-2 lg:row-start-1 flex justify-center lg:justify-start items-start lg:items-end">
           <div className="relative">
-            <div id="body-text" className="font-family-lato text-xs pb-2 text-center md:text-end">Digital studio specializing in creating exceptional web experiences. From front-end development to interactive animations, we transform ideas into digital reality with a minimalist and functional approach.</div>
+            <div id="body-text" className="font-family-lato text-sm md:text-xs pb-2 text-center md:text-end">Digital studio specializing in creating exceptional web experiences. From front-end development to interactive animations, we transform ideas into digital reality with a minimalist and functional approach.</div>
             <div id="bottom-bar" className="hidden md:block absolute bg-black h-4 top-100%"></div>
           </div>
         </div>
