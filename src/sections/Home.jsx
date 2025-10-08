@@ -59,7 +59,7 @@ export default function Home() {
 
   return (
     <section id="home-section" className="h-dvh grid place-content-center">
-      <div className="px-5 grid grid-cols-1 lg:grid-cols-2 grid-rows-3 lg:grid-rows-2 lg:gap-x-20 w-sm md:w-7xl overflow-hidden">
+      <div className="px-5 grid grid-cols-1 lg:grid-cols-2 grid-rows-3 lg:grid-rows-2 lg:gap-x-20 w-sm md:w-7xl overflow-x-clip">
         <div className="font-family-oswald col-start-1 row-start-1 flex justify-center lg:justify-start items-end select-none">
           <span id="first-title" className="text-7xl lg:text-[11rem] whitespace-nowrap leading-none">tween_</span>
         </div>
@@ -69,8 +69,8 @@ export default function Home() {
             <div id="bottom-bar" className="hidden md:block absolute bg-black h-4 top-100%"></div>
           </div>
         </div>
-        <div className="relative mt-5 font-family-oswald lg:col-span-2 col-start-1 row-start-2 flex justify-center lg:justify-start items-start select-none text-center lg:text-left overflow-hidden w-max m-auto">
-          <span id="second-title" className="text-4xl lg:text-[11rem] lg:whitespace-nowrap leading-none pb-5 md:pb-0">the motion protocol</span>
+        <div className="relative mt-5 font-family-oswald lg:col-span-2 col-start-1 row-start-2 flex justify-center lg:justify-start items-start select-none text-center lg:text-left w-max m-auto">
+          <span id="second-title" className="text-4xl lg:text-[11rem] leading-none pb-5 md:pb-0">the motion protocol</span>
           <div id="second-title-bar" className="absolute bg-black h-1 md:h-4 top-1/3 md:top-1/2 left-0"></div>
         </div>
       </div>
