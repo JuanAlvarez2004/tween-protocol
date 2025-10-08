@@ -24,8 +24,8 @@ function Intro() {
     const chasingCursor = document.getElementById("chasing-cursor")
     const introText = document.getElementById("intro-text")
     const inkButton = document.getElementById("ink-button")
-    const introTitleStudio = document.getElementById("intro-title-protocol")
-    const introTitleStudioSplit = new SplitText(introTitleStudio, { type: "chars" })
+    const introTitleProtocol = document.getElementById("intro-title-protocol")
+    const introTitleProtocolSplit = new SplitText(introTitleProtocol, { type: "chars" })
 
     const underScoreRect = titleBrandSplit.chars[titleBrandSplit.chars.length - 1].getBoundingClientRect()
     const recPoint = chasingCursor.getBoundingClientRect()
@@ -35,41 +35,42 @@ function Intro() {
       y: underScoreRect.top - recPoint.top,
     })
 
-    // Set initial state for studio text to prevent layout shift
-    gsap.set(introTitleStudio, {
+    gsap.set(introTitleProtocol, {
       transformOrigin: "left center"
     })
 
     const tl = gsap.timeline()
 
     tl
-      .from(titleBrandSplit.chars, { // Animate each character of "blank_"
+      .from(titleBrandSplit.chars, { // Animate each character of "tween_"
         alpha: 0,
         scaleX: .1,
         stagger: 0.1,
+        duration: 0.3,
         ease: "power2.out",
       })
-      .from(introTitleStudioSplit.chars, { // Animate each character of "studio"
+      .from(introTitleProtocolSplit.chars, { // Animate each character of "protocol"
         alpha: 0,
         scaleX: .1,
         stagger: 0.1,
+        duration: 0.3,
         ease: "power2.out",
       }, "-=0.3")
-      .to(introTitleStudio, { // Move "studio" out of view to the left
+      .to(introTitleProtocol, { // Move "protocol" out of view to the left
         x: -introTitle.offsetWidth,
         alpha: 0,
         ease: "power2.inOut",
         duration: 0.8,
       }, "-=0.25")
-      .to(introTitle, { // Center "blank_" horizontally
+      .to(introTitle, { // Center "tween" horizontally
         x: containerTitleRef.current ? containerTitleRef.current.offsetWidth / 2 - introTitle.offsetWidth / 2 : 0,
         ease: "power2.inOut",
         duration: 0.8,
       }, "<")
-      .set(introTitleStudio, { // Hide studio completely after animation
+      .set(introTitleProtocol, { // Hide protocol completely after animation
         visibility: "hidden",
       })
-      .to(chasingCursor, { // Position chasing cursor at right top of char "_" of "blank_"
+      .to(chasingCursor, { // Position chasing cursor at right top of char "_" of "tween_"
         x: introTitle.offsetWidth / 2 - recPoint.width / 2,
         duration: 0.3,
         ease: "power2.out",
