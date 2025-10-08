@@ -28,7 +28,6 @@ export default function Header() {
     } else {
       gsap.to(headerMenu, {
         y: -headerMenu.offsetHeight + menuButton.offsetHeight + 10,
-        // y: -20, 
         duration: 1,
         ease: "power4.out"
       })
@@ -41,16 +40,16 @@ export default function Header() {
       <nav>
         <ul className="list-none gap-3 p-10 text-4xl w-full">
           <li>
-            <AnchorMenu href="#home-section" content="Inicio" />
+            <AnchorMenu href="#home-section" content="Home" />
           </li>
           <li>
-            <AnchorMenu href="#about-section" content="Acerca" />
+            <AnchorMenu href="#about-section" content="About" />
           </li>
           <li>
-            <AnchorMenu href="#services-section" content="Servicios" />
+            <AnchorMenu href="#services-section" content="Services" />
           </li>
           <li>
-            <AnchorMenu href="#contact-section" content="Contacto" />
+            <AnchorMenu href="#contact-section" content="Contact" />
           </li>
         </ul>
       </nav>
