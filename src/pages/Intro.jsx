@@ -24,7 +24,7 @@ function Intro() {
     const chasingCursor = document.getElementById("chasing-cursor")
     const introText = document.getElementById("intro-text")
     const inkButton = document.getElementById("ink-button")
-    const introTitleStudio = document.getElementById("intro-title-studio")
+    const introTitleStudio = document.getElementById("intro-title-protocol")
     const introTitleStudioSplit = new SplitText(introTitleStudio, { type: "chars" })
 
     const underScoreRect = titleBrandSplit.chars[titleBrandSplit.chars.length - 1].getBoundingClientRect()
@@ -100,17 +100,17 @@ function Intro() {
     <section className="grid place-items-center min-h-screen">
       <div className="relative flex flex-col items-center gap-8 max-w-md md:max-w-xl px-5">
         <div ref={containerTitleRef} className="flex flex-row items-end relative">
-          <h1 id="intro-title" className="font-family-oswald text-6xl md:text-8xl select-none whitespace-nowrap">blank_</h1>
-          <h1 id="intro-title-studio" className="font-family-oswald text-6xl md:text-8xl select-none">studio</h1>
+          <h1 id="intro-title" className="font-family-oswald text-6xl md:text-8xl select-none whitespace-nowrap">tween_</h1>
+          <h1 id="intro-title-protocol" className="font-family-oswald text-6xl md:text-8xl select-none">protocol</h1>
         </div>
         <div id="chasing-cursor" className="absolute p-0 m-0 w-4 h-4 bg-transparent border-2 border-black rounded-full flex items-center justify-center select-none">
           <small className="m-0 p-5 leading-none text-[11px] font-bold">R</small>
         </div>
-        <small className="text-gray-600 text-center" id="intro-text">Estudio digital especializado en crear experiencias web excepcionales. Transformamos ideas en realidad digital con un enfoque minimalista, funcional y centrado en el usuario.</small>
+        <small className="text-gray-600 text-center" id="intro-text">Digital studio specializing in creating exceptional web experiences. We transform ideas into digital reality with a minimalist, functional, and user-centered approach.</small>
         <Link to="/app" id="ink-button">
           <InkButton ballCursorRef={ballCursorRef}>
             <div className="flex items-center gap-1">
-              <span className="flex-2 font-family-oswald text-lg bg-transparent p-0 m-0">Entrar</span>
+              <span className="flex-2 font-family-oswald text-lg bg-transparent p-0 m-0">Enter</span>
             </div>
           </InkButton>
         </Link>

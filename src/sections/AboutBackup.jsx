@@ -5,26 +5,26 @@ import { useMediaQuery } from "react-responsive"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function About() {
+export default function AboutBackup() {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
-
+  
   useGSAP(() => {
     if (!isMobile) {
       const tlDesktop = gsap.timeline({
         scrollTrigger: {
           trigger: "#about-section",
           start: "top bottom",
-          end: "center bottom",
+          end: "bottom top",
           scrub: true,
         },
       })
 
-      tlDesktop
-        .from("#about-part-1", {
-          y: -400,
-          alpha: 0,
-          duration: 1.5,
-        })
+      // Animación de entrada (0% - 50% del scroll)
+      tlDesktop.from("#about-part-1", {
+        y: -400,
+        alpha: 0,
+        duration: 1.5,
+      })
         .from("#about-part-2", {
           y: 400,
           alpha: 0,
@@ -39,6 +39,39 @@ export default function About() {
           alpha: 0,
           duration: 1.5,
         }, "<")
+
+      // Pausa en el estado visible (50% - 60% del scroll)
+      tlDesktop.to("#about-part-1", {
+        y: 0,
+        alpha: 1,
+        duration: 0.5,
+      })
+        .to("#about-part-3", {
+          y: 0,
+          alpha: 1,
+          duration: 0.5,
+        })
+
+      // Animación de salida (60% - 100% del scroll)
+      tlDesktop.to("#about-part-1", {
+        y: 400,
+        alpha: 0,
+        duration: 1.5,
+      })
+        .to("#about-part-2", {
+          y: -400,
+          alpha: 0,
+          duration: 1.5,
+        }, "<")
+        .to("#about-part-3", {
+          y: 400,
+          alpha: 0,
+          duration: 1.5,
+        }, "<")
+        .to("#about-title", {
+          alpha: 0,
+          duration: 1.5,
+        }, "<")
     } else {
       const tlMobile = gsap.timeline({
         scrollTrigger: {
@@ -50,12 +83,11 @@ export default function About() {
       })
 
       // Animación de entrada (0% - 50% del scroll)
-      tlMobile
-        .from("#about-part-1-text", {
-          y: 300,
-          alpha: 0,
-          duration: 1.5,
-        })
+      tlMobile.from("#about-part-1-text", {
+        y: 300,
+        alpha: 0,
+        duration: 1.5,
+      })
         .from("#about-part-2", {
           y: 300,
           alpha: 0,
@@ -71,6 +103,28 @@ export default function About() {
           alpha: 0,
           duration: 1.5,
         }, "<")
+
+      // Pausa en el estado visible (50% - 60% del scroll)
+      tlMobile.to("#about-part-1-text", {
+        y: 0,
+        alpha: 1,
+        duration: 0.5,
+      })
+        .to("#about-part-3-text", {
+          y: 0,
+          alpha: 1,
+          duration: 0.5,
+        })
+        .to("#about-part-2", {
+          y: 0,
+          alpha: 1,
+          duration: 0.5,
+        })
+        .to("#about-title", {
+          y: 0,
+          alpha: 1,
+          duration: 0.5,
+        })
     }
   }, [])
 

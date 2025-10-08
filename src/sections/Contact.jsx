@@ -35,7 +35,7 @@ export default function Contact() {
   return (
     <section id="contact-section" className="min-h-screen relative px-5 overflow-hidden">
       <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
-        <h2 id="first-contact-title" className="font-family-oswald text-8xl md:text-[16rem] leading-none line-through">Contáctame</h2>
+        <h2 id="first-contact-title" className="font-family-oswald text-8xl md:text-[16rem] leading-none line-through">Contact us</h2>
       </div>
       <div className="hidden absolute inset-0 -bottom-10 md:flex items-center justify-center z-10">
         <img id="contact-img" src="../../images/reaching.jpg" className="scale-50" />
@@ -43,7 +43,8 @@ export default function Contact() {
       <div className="absolute inset-0 backdrop-blur-md z-20"></div>
       <div className="absolute z-30 p-10 inset-0 flex items-center justify-center">
         <div id="contact-box" className="font-family-lato text-center bg-white/50 p-6 rounded-md flex flex-col gap-4">
-          <div className="text-lg">
+          <h3 className="text-2xl md:text-4xl font-family-oswald">Here the form</h3>
+          {/* <div className="text-lg">
             <p className="mb-2">¿Listo para llenar los espacios en blanco?</p>
             <p className="text-sm opacity-80">Conectemos y creemos algo extraordinario juntos</p>
           </div>
@@ -56,7 +57,7 @@ export default function Contact() {
           </div>
           <div>
             <p>@blank_studio_co</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
