@@ -4,6 +4,7 @@ import { SplitText } from "gsap/SplitText"
 import { useRef, useState } from "react"
 import BallCursor from "../components/common/BallCursor"
 import InkButton from "../components/common/InkButton"
+import SEOHead from "../components/common/SEOHead"
 import { useFontLoading } from "../hooks/useFontLoading"
 import { Link } from "react-router"
 
@@ -98,26 +99,37 @@ function Intro() {
   }, [fontsLoaded])
 
   return (
-    <section className="grid place-items-center min-h-screen">
-      <div className="relative flex flex-col items-center gap-8 max-w-md md:max-w-xl px-5">
-        <div ref={containerTitleRef} className="flex flex-row items-end relative">
-          <h1 id="intro-title" className="font-family-oswald text-6xl md:text-8xl select-none whitespace-nowrap">tween_</h1>
-          <h1 id="intro-title-protocol" className="font-family-oswald text-6xl md:text-8xl select-none">protocol</h1>
-        </div>
-        <div id="chasing-cursor" className="absolute p-0 m-0 w-4 h-4 bg-transparent border-2 border-black rounded-full flex items-center justify-center select-none">
-          <small className="m-0 p-5 leading-none text-[11px] font-bold">R</small>
-        </div>
-        <small className="text-gray-600 text-center" id="intro-text">Digital studio specializing in creating exceptional web experiences. We transform ideas into digital reality with a minimalist, functional, and user-centered approach.</small>
-        <Link to="/app" id="ink-button">
-          <InkButton ballCursorRef={ballCursorRef}>
-            <div className="flex items-center gap-1">
-              <span className="flex-2 font-family-oswald text-lg bg-transparent p-0 m-0">Enter</span>
-            </div>
-          </InkButton>
-        </Link>
-      </div>
-      <BallCursor ref={ballCursorRef} positionInitialCursor={positionInitialCursor} />
-    </section>
+    <>
+      <SEOHead 
+        title="Tween Protocol® | Digital Studio for Exceptional Web Experiences"
+        description="Digital studio specializing in creating exceptional web experiences. We transform ideas into digital reality with a minimalist, functional, and user-centered approach."
+        keywords="web development, digital studio, web design, interactive animations, GSAP, React, front-end development, UX/UI design, minimalist design"
+        canonical="https://tweenprotocol.com/"
+        ogType="website"
+      />
+      <main className="grid place-items-center min-h-screen">
+        <section className="relative flex flex-col items-center gap-8 max-w-md md:max-w-xl px-5" role="banner">
+          <header className="flex flex-row items-end relative" ref={containerTitleRef}>
+            <h1 id="intro-title" className="font-family-oswald text-6xl md:text-8xl select-none whitespace-nowrap">tween_</h1>
+            <h1 id="intro-title-protocol" className="font-family-oswald text-6xl md:text-8xl select-none">protocol</h1>
+          </header>
+          <div id="chasing-cursor" className="absolute p-0 m-0 w-4 h-4 bg-transparent border-2 border-black rounded-full flex items-center justify-center select-none" aria-hidden="true">
+            <small className="m-0 p-5 leading-none text-[11px] font-bold">R</small>
+          </div>
+          <small className="text-gray-600 text-center" id="intro-text">Digital studio specializing in creating exceptional web experiences. We transform ideas into digital reality with a minimalist, functional, and user-centered approach.</small>
+          <nav>
+            <Link to="/app" id="ink-button" aria-label="Enter to main application">
+              <InkButton ballCursorRef={ballCursorRef}>
+                <div className="flex items-center gap-1">
+                  <span className="flex-2 font-family-oswald text-lg bg-transparent p-0 m-0">Enter</span>
+                </div>
+              </InkButton>
+            </Link>
+          </nav>
+        </section>
+        <BallCursor ref={ballCursorRef} positionInitialCursor={positionInitialCursor} />
+      </main>
+    </>
   )
 }
 

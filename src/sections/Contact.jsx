@@ -72,18 +72,18 @@ export default function Contact() {
 
 
   return (
-    <section id="contact-section" className="min-h-screen relative px-5 overflow-hidden">
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
+    <section id="contact-section" className="min-h-screen relative px-5 overflow-hidden" aria-label="Contact Us">
+      <header className="absolute inset-0 flex flex-col items-center justify-center z-20">
         <h2 id="first-contact-title" className="font-family-oswald text-8xl md:text-[14rem] leading-none line-through">Contact us</h2>
-      </div>
+      </header>
       <div className="hidden absolute inset-0 -bottom-10 md:flex items-center justify-center z-10">
-        <img id="contact-img" src="../../images/reaching.jpg" className="scale-50" />
+        <img id="contact-img" src="../../images/reaching.jpg" className="scale-50" alt="Person reaching out, symbolizing connection and communication" />
       </div>
-      <div className="absolute inset-0 backdrop-blur-md z-20"></div>
+      <div className="absolute inset-0 backdrop-blur-md z-20" aria-hidden="true"></div>
       <div id="contact-form" className="relative z-30 min-h-screen grid place-content-center">
-        <form onSubmit={handleSubmit} className="font-family-lato text-center bg-white/50 p-6 rounded-md flex flex-col gap-4 w-xs md:w-2xl justify-center px-8 md:px-15 py-10">
+        <form onSubmit={handleSubmit} className="font-family-lato text-center bg-white/50 p-6 rounded-md flex flex-col gap-4 w-xs md:w-2xl justify-center px-8 md:px-15 py-10" role="form" aria-label="Contact form">
           <div className="flex justify-between items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M18 8L22 12L18 16" />
               <path d="M2 12H22" />
             </svg>
@@ -100,6 +100,7 @@ export default function Contact() {
               onChange={handleInputChange}
               required
               disabled={isSubmitting}
+              aria-describedby="email-error"
             />
           </div>
           <div className="text-sm md:text-base font-family-lato flex flex-col gap-2 text-start">
@@ -111,6 +112,7 @@ export default function Contact() {
               onChange={handleInputChange}
               required
               disabled={isSubmitting}
+              aria-describedby="message-error"
             />
           </div>
           <div className="flex flex-col md:flex-row justify-between">
@@ -118,14 +120,15 @@ export default function Contact() {
               text={isSubmitting ? "..." : "Send"}
               type="submit"
               disabled={isSubmitting}
+              aria-label={isSubmitting ? "Sending message" : "Send message"}
             />
             {submitStatus === 'success' && (
-              <div className="font-family-lato text-green-900/70 text-sm text-end flex items-end mt-3 md:mt-0">
+              <div className="font-family-lato text-green-900/70 text-sm text-end flex items-end mt-3 md:mt-0" role="status" aria-live="polite">
                 Message sent successfully!
               </div>
             )}
             {submitStatus === 'error' && (
-              <div className="font-family-lato text-red-700/70 text-sm text-end flex items-end mt-3 md:mt-0">
+              <div className="font-family-lato text-red-700/70 text-sm text-end flex items-end mt-3 md:mt-0" role="alert" aria-live="assertive">
                 {errorMessage}
               </div>
             )}
