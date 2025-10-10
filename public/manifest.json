@@ -1,0 +1,26 @@
+{
+  "name": "Tween Protocol®",
+  "short_name": "TweenProtocol",
+  "description": "Digital studio specializing in creating exceptional web experiences with minimalist design and interactive animations.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/icons/under-score.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["design", "development", "business"],
+  "lang": "en",
+  "dir": "ltr",
+  "orientation": "portrait-primary"
+}
