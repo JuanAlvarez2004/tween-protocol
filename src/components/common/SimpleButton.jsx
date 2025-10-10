@@ -1,9 +1,9 @@
-export default function SimpleButton({ text, link }) {
+export default function SimpleButton({ text, className, type = "button" }) {
 
   return (
-    <div className="border-2 border-black text-black hover:text-white hover:bg-black transition-all py-2 px-4 cursor-crosshair flex flex-row justify-center items-center gap-2">
-      <a href={link} target="_blank" rel="noopener noreferrer" className="cursor-crosshair">{text}</a>
-    </div>
+    <button className={`text-white py-2 px-6 cursor-crosshair hover:scale-105 active:scale-95 bg-black transition max-w-max ${className}`} type={type}>
+        {text}
+    </button>
   )
 
 }
