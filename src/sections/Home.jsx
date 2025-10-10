@@ -59,19 +59,19 @@ export default function Home() {
 
   return (
     <section id="home-section" className="h-dvh grid place-content-center">
-      <div className="px-5 grid grid-cols-1 lg:grid-cols-2 grid-rows-3 lg:grid-rows-2 lg:gap-x-20 w-sm md:w-7xl overflow-x-clip">
+      <div className="px-5 grid grid-cols-1 lg:grid-cols-2 grid-rows-3 lg:grid-rows-2 lg:gap-x-20 w-sm lg:w-7xl overflow-x-clip">
         <div className="font-family-oswald col-start-1 row-start-1 flex justify-center lg:justify-start items-end select-none">
           <span id="first-title" className="text-7xl lg:text-[11rem] whitespace-nowrap leading-none">tween_</span>
         </div>
         <div className="font-family-lato lg:col-start-2 lg:row-start-1 flex justify-center lg:justify-start items-start lg:items-end">
           <div className="relative">
-            <div id="body-text" className="font-family-lato text-sm md:text-xs pb-2 text-center md:text-end">Digital studio specializing in creating exceptional web experiences. From front-end development to interactive animations, we transform ideas into digital reality with a minimalist and functional approach.</div>
-            <div id="bottom-bar" className="hidden md:block absolute bg-black h-4 top-100%"></div>
+            <div id="body-text" className="font-family-lato text-sm lg:text-xs pb-2 text-center lg:text-end">Digital studio specializing in creating exceptional web experiences. From front-end development to interactive animations, we transform ideas into digital reality with a minimalist and functional approach.</div>
+            <div id="bottom-bar" className="hidden lg:block absolute bg-black h-4 top-100%"></div>
           </div>
         </div>
         <div className="relative mt-5 font-family-oswald lg:col-span-2 col-start-1 row-start-2 flex justify-center lg:justify-start items-start select-none text-center lg:text-left w-max m-auto">
-          <span id="second-title" className="text-4xl lg:text-[11rem] leading-none pb-5 md:pb-0">the motion protocol</span>
-          <div id="second-title-bar" className="absolute bg-black h-1 md:h-4 top-1/3 md:top-1/2 left-0"></div>
+          <span id="second-title" className="text-4xl lg:text-[11rem] leading-none pb-5 lg:pb-0">the motion protocol</span>
+          <div id="second-title-bar" className="absolute bg-black h-1 lg:h-4 top-1/3 lg:top-1/2 left-0"></div>
         </div>
       </div>
     </section>
